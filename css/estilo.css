@@ -1,0 +1,209 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size:62.5%;
+}
+
+li{
+	list-style-type: none;
+	padding: 10px;
+	margin: 10px;
+	
+
+}
+a{
+	text-decoration: none;
+	font-size: 2rem;
+	
+}
+ul{
+	display: flex;
+	justify-content: end;
+	flex-wrap: wrap;
+	font-family: sans-serif;
+
+}
+nav{
+	width: 100%;
+	
+}
+
+
+
+/*GRID BODY*/
+.grid-body {
+	display:grid;
+	grid-template-areas: 
+	"header header header"
+	"main main main"
+	"producFotos producFotos producFotos"
+	"contentSobreNos contentSobreNos contentSobreNos"
+	"ventas ventas ventas"
+	"contact contact contact"
+	"footer footer footer";
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: auto auto auto auto auto auto auto;
+
+}
+header{
+	grid-area: header;
+}
+
+main{
+	grid-area: main; 
+	justify-content: space-around; 
+}
+header,footer,.flexcontactos,main{display: flex;}
+.videoMain{
+	width: 40%;
+	margin:2%;
+}
+.textMain{width: 40%; align-self: center; }
+
+.producFotos {
+	grid-area: producFotos;  
+
+	
+}
+.contentSobreNos{
+	grid-area: contentSobreNos;
+}
+.ventas{
+	grid-area: ventas;
+}
+.contact {
+	grid-area: contact;
+
+}
+.flexcontactos{
+
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.cuadrado{
+	border: solid;
+	align-self: center;
+}
+footer{
+	grid-area: footer;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	border-top: solid;
+	align-items: center;
+	background-color: #5e7980;
+}
+.imgfooter{ width: 100%; }
+.border {
+	border-top: solid;
+}
+
+.titulos{
+	font-size: 2rem;
+	font-family: sans-serif;
+	margin:10px;
+
+}
+.letrap{
+	font-size: 2rem;
+	font-family: sans-serif;
+	margin:10px;
+
+}
+h2,h3,h4{text-decoration: underline;}
+h5{color: white; text-decoration: underline;}
+/*GRID PRODUCTOS/GALERIA*/
+#gridProductos {
+	display: grid;
+	grid-template-areas: 
+	"title1 title1 title1"
+	"title2 title2 title2"
+	"imgVelas1 imgVelas2 imgVelas3"
+	"title3 title3 title3"
+	"imgMacrame1 imgMacrame2 imgMacrame3";
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: auto auto auto auto auto;
+	justify-content:space-around;
+    background-color: #5e7980;
+
+}
+.title1{ grid-area: title1;}
+.title2{ grid-area: title2; text-align: center;}
+.imgVelas1{ grid-area: imgVelas1; margin:2%;}
+.imgVelas2{grid-area:imgVelas2; margin:2%;}
+.imgVelas3{grid-area:imgVelas3; margin: 2%;}
+.title3{grid-area:title3; text-align: center;}
+.imgMacrame1{ grid-area: imgMacrame1; margin:2%;}
+.imgMacrame2{grid-area:imgMacrame2; margin:3%;}
+.imgMacrame3{grid-area:imgMacrame3; margin:2%;}
+.imgVelas1 img,.imgVelas2 img,.imgVelas3 img{width: 100%; height:auto;}
+.imgMacrame1 img,.imgMacrame3 img{ width: 100%; height:auto; }
+.imgMacrame2 img{width: 100%; height: 100%;}
+
+/*MEDIA QUERY BODY*/
+@media only screen and (max-width:768px){
+	body .grid-body{
+		display:grid;
+		grid-template-areas: 
+		"header header"
+		"main main"
+		"producFotos producFotos"
+		"contentSobreNos contentSobreNos"
+		"ventas ventas"
+		"contact contact"
+		"footer footer";
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto auto auto auto auto;  }
+		header,main,footer{display:flex; flex-wrap: wrap;}
+		.videoMain,.textMain{
+			width: 100%;}
+			.imgfamilia{width: 100%;  }
+			.imglogo{width: 100%;}
+			.letrap{
+				font-size: 1.5rem;
+				font-family: sans-serif;
+				margin:5px;
+			}
+			a{
+	text-decoration: none;
+	font-size: 1.5rem;
+	
+}
+ul{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	font-family: sans-serif;
+
+}
+		}
+		.mapa{width: 100%;}
+		/*MEDIA QUERY PRODUCTOS*/
+		@media only screen and (max-width: 768px){
+			#gridProductos {
+				display: grid;
+				grid-template-areas: 
+				"title1"
+				"title2"
+				"fotovela"
+				"fotovela2"
+				"fotovela3"
+				"title3"
+				"fotomacrame"
+				"fotomacrame2"
+				"fotomacrame3";
+				grid-template-columns:100%;
+				grid-template-rows: auto auto auto auto auto; 
+				justify-content: center;
+			}
+			.fotovela{grid-area:fotovela; margin:2%;}
+			.fotovela img,.fotovela2 img,.fotovela3 img{width: 100%;}
+			.fotovela2{grid-area:fotovela2;margin:2%;}
+			.fotovela3{grid-area:fotovela3; margin:2%;}
+			.fotomacrame{grid-area: fotomacrame;margin:2%;}
+			.fotomacrame img,.fotomacrame2 img,.fotomacrame3 img{width:100%;}
+			.fotomacrame2{grid-area:fotomacrame2;margin:2%;}
+			.fotomacrame3{grid-area:fotomacrame3;margin: 2%;}
+
+		}
