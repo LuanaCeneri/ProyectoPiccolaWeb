@@ -49,6 +49,7 @@ nav{
 }
 header{
 	grid-area: header;
+	background:linear-gradient(to right,white,white,#5e7980,#5e7980);
 }
 
 main{
@@ -92,7 +93,8 @@ footer{
 	flex-wrap: nowrap;
 	border-top: solid;
 	align-items: center;
-	background-color: #5e7980;
+	background:linear-gradient(to top,#5e7980,grey);
+	
 }
 .imgfooter{ width: 100%; }
 .border {
